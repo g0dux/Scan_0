@@ -6,26 +6,33 @@ import logging
 from colorama import Fore, Style
 
 def search(username, result_label, logger):
-    """Pesquisa pelo usuário nas redes sociais usando a ferramenta sherlock-py."""
+    """Pesquisa pelo usuário nas redes sociais usando a API oficial do sherlock."""
     try:
-        response = requests.get(f"https://sherlock-project.herokuapp.com/api/{username}")
-        response.raise_for_status()
-        results = response.json()
-        if results:
-            logger.info(f"Encontramos {len(results)} resultados:")
-            result_label.config(text=f"Encontramos {len(results)} resultados:")
-            for site, data in results.items():
-                logger.info(f"- {site}: {data['url_user']}")
-                result_label.config(text=result_label.cget("text") + f"\n- {site}: {data['url_user']}")
-                if data['exists'] == "yes":
-                    logger.info(Fore.GREEN + "Usuário encontrado!" + Style.RESET_ALL)
-                    result_label.config(text=result_label.cget("text") + "\nUsuário encontrado!")
-                else:
-                    logger.info(Fore.RED + "Usuário não encontrado!" + Style.RESET_ALL)
-                    result_label.config(text=result_label.cget("text") + "\nUsuário não encontrado!")
+        # Muda a URL da requisição para usar a API oficial do sherlock
+        response = requests.get(f"https://api.sherlock-project.dev/{username}")
+        # Verifica se a resposta tem o status 200 (OK)
+        if response.status_code == 200:
+            results = response.json()
+            if results:
+                logger.info(f"Encontramos {len(results)} resultados:")
+                result_label.config(text=f"Encontramos {len(results)} resultados:")
+                for site, data in results.items():
+                    logger.info(f"- {site}: {data['url_user']}")
+                    result_label.config(text=result_label.cget("text") + f"\n- {site}: {data['url_user']}")
+                    # Verifica se o campo exists é verdadeiro ou falso
+                    if data['exists']:
+                        logger.info(Fore.GREEN + "Usuário encontrado!" + Style.RESET_ALL)
+                        result_label.config(text=result_label.cget("text") + "\nUsuário encontrado!")
+                    else:
+                        logger.info(Fore.RED + "Usuário não encontrado!" + Style.RESET_ALL)
+                        result_label.config(text=result_label.cget("text") + "\nUsuário não encontrado!")
+            else:
+                logger.info("Nenhum resultado encontrado.")
+                result_label.config(text="Nenhum resultado encontrado.")
         else:
-            logger.info("Nenhum resultado encontrado.")
-            result_label.config(text="Nenhum resultado encontrado.")
+            # Trata os casos em que a resposta tem um status diferente de 200
+            logger.error(f"A API retornou um status {response.status_code}")
+            result_label.config(text=f"A API retornou um status {response.status_code}")
 
     except requests.exceptions.RequestException as e:
         logger.exception(f"Ocorreu um erro na requisição: {e}")
