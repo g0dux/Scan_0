@@ -1,4 +1,3 @@
-Certamente! Aqui está um exemplo de um arquivo README que você pode incluir com o seu projeto:
 
 ```markdown
 # Sherlock GUI
