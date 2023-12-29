@@ -49,5 +49,3 @@ Para dúvidas ou sugestões, sinta-se à vontade para entrar em contato via [ema
 
 Este projeto está licenciado sob a [Licença MIT](LICENSE).
 ```
-
-Essa versão inclui uma seção sobre "Como Usar", detalhando passos para facilitar o entendimento. Além disso, destaquei mais as seções principais do README. Personalize conforme necessário!
