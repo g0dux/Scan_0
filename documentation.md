@@ -1,24 +1,19 @@
 
+
 ```markdown
 # Sherlock GUI
 
-Este é um aplicativo de interface gráfica simples que utiliza a API oficial do Sherlock para buscar usuários em redes sociais.
+Bem-vindo ao Sherlock GUI, um aplicativo de interface gráfica para buscar usuários em redes sociais usando a API oficial do Sherlock.
 
 ## Pré-requisitos
 
 Certifique-se de ter as seguintes bibliotecas instaladas no seu ambiente Python:
 
-- `tkinter`
-- `requests`
-- `colorama`
-
-Você pode instalar as dependências usando:
-
 ```bash
 pip install tkinter requests colorama
 ```
 
-## Como usar
+## Como Usar
 
 1. Execute o script `sherlock_gui.py`.
 2. Insira o nome de usuário na caixa de entrada.
@@ -27,17 +22,12 @@ pip install tkinter requests colorama
 
 ## Estrutura do Projeto
 
-- `sherlock_gui.py`: O script principal que cria a interface gráfica e interage com a API do Sherlock.
-- `README.md`: Este arquivo que fornece informações sobre o projeto.
+- `sherlock_gui.py`: Script principal para criar a interface gráfica e interagir com a API do Sherlock.
+- `README.md`: Informações sobre o projeto.
 
 ## Contribuições
 
-Contribuições são bem-vindas! Sinta-se à vontade para abrir problemas ou enviar solicitações de pull.
-
-## Licença
-
-Este projeto está licenciado sob a [Licença MIT](LICENSE).
-```
+Contribuições são bem-vindas! Abra problemas ou envie solicitações de pull.
 
 ## Configurações Adicionais
 
@@ -45,12 +35,19 @@ Este projeto está licenciado sob a [Licença MIT](LICENSE).
 
 ## Estrutura do Código
 
-- `search(username, result_label, logger)`: Função principal que realiza a busca utilizando a API do Sherlock e atualiza a interface com os resultados.
+- `search(username, result_label, logger)`: Função principal para buscar utilizando a API do Sherlock e atualizar a interface.
 
-- `on_search_button_click(entry, result_label, logger)`: Função chamada ao clicar no botão de pesquisa. Obtém o nome de usuário da entrada e inicia a busca.
+- `on_search_button_click(entry, result_label, logger)`: Função chamada ao clicar no botão de pesquisa.
 
-- `create_gui()`: Função principal que cria a interface gráfica usando tkinter.
+- `create_gui()`: Função principal para criar a interface gráfica.
 
 ## Contato
 
 Para dúvidas ou sugestões, sinta-se à vontade para entrar em contato via [email@example.com](mailto:email@example.com).
+
+## Licença
+
+Este projeto está licenciado sob a [Licença MIT](LICENSE).
+```
+
+Essa versão inclui uma seção sobre "Como Usar", detalhando passos para facilitar o entendimento. Além disso, destaquei mais as seções principais do README. Personalize conforme necessário!
