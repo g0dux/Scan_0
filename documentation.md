@@ -1,70 +1,43 @@
-Documentação da ferramenta de hacking
+Certamente! Aqui está um exemplo de um arquivo README que você pode incluir com o seu projeto:
 
-Introdução
+```markdown
+# Sherlock GUI
 
-Esta ferramenta é um aplicativo de interface gráfica do usuário (GUI) que pode ser usado para realizar pesquisas sobre dispositivos e domínios. A ferramenta usa as APIs IPinfo.io e Whois Lookup para obter informações sobre dispositivos e domínios.
+Este é um aplicativo de interface gráfica simples que utiliza a API oficial do Sherlock para buscar usuários em redes sociais.
 
-Requisitos
+## Pré-requisitos
 
-Para usar esta ferramenta, você precisará dos seguintes requisitos:
+Certifique-se de ter as seguintes bibliotecas instaladas no seu ambiente Python:
 
-Python 3.10 ou superior
-As bibliotecas Python requests, json e tkinter
-Para instalar as bibliotecas Python necessárias, você pode usar o seguinte comando:
+- `tkinter`
+- `requests`
+- `colorama`
 
-pip install -r requirements.txt
-Instalação
+Você pode instalar as dependências usando:
 
-Para instalar a ferramenta, você precisará descompactar o arquivo zip fornecido. Em seguida, você poderá executar a ferramenta executando o seguinte comando:
+```bash
+pip install tkinter requests colorama
+```
 
-python3 hacking_tool.py
-Uso
+## Como usar
 
-A ferramenta tem uma interface simples e fácil de usar. Para realizar uma pesquisa, você precisará seguir estas etapas:
+1. Execute o script `sherlock_gui.py`.
+2. Insira o nome de usuário na caixa de entrada.
+3. Clique no botão "Pesquisar" para iniciar a busca.
+4. Os resultados serão exibidos na interface gráfica.
 
-Selecione o tipo de pesquisa.
-Insira o valor de pesquisa.
-Clique no botão "Pesquisar".
-A ferramenta retornará as informações da pesquisa na área de texto "Resultados".
+## Estrutura do Projeto
 
-Tipos de pesquisa
+- `sherlock_gui.py`: O script principal que cria a interface gráfica e interage com a API do Sherlock.
+- `README.md`: Este arquivo que fornece informações sobre o projeto.
 
-A ferramenta suporta dois tipos de pesquisa:
+## Contribuições
 
-IP: Pesquisa informações sobre um dispositivo com o endereço IP especificado.
-Domínio: Pesquisa informações sobre um domínio.
-Valores de pesquisa
+Contribuições são bem-vindas! Sinta-se à vontade para abrir problemas ou enviar solicitações de pull.
 
-O valor de pesquisa depende do tipo de pesquisa selecionado. Para uma pesquisa de IP, o valor de pesquisa deve ser um endereço IP. Para uma pesquisa de domínio, o valor de pesquisa deve ser um domínio.
+## Licença
 
-Resultados
+Este projeto está licenciado sob a [Licença MIT](LICENSE).
+```
 
-As informações da pesquisa são retornadas como um objeto JSON. O objeto JSON pode conter as seguintes informações:
-
-IP: O endereço IP do dispositivo ou domínio.
-Hostname: O hostname do dispositivo ou domínio.
-Sistema operacional: O sistema operacional do dispositivo.
-Portas abertas: As portas abertas no dispositivo.
-Exemplo
-
-Aqui está um exemplo de como usar a ferramenta:
-
-# Selecione o tipo de pesquisa
-variable_type.set("ip")
-
-# Insira o valor de pesquisa
-entry_input.insert(0, "192.168.1.1")
-
-# Clique no botão "Pesquisar"
-button_search.invoke()
-A ferramenta retornará as seguintes informações:
-
-{
-    "ip": "192.168.1.1",
-    "hostname": "meu-computador",
-    "operating_system": "Linux",
-    "open_ports": ["22", "80", "443"]
-}
-Créditos
-
-Esta ferramenta foi desenvolvida por [andha0].
+Lembre-se de substituir ou complementar as seções conforme necessário, especialmente se houver detalhes específicos sobre a configuração ou personalização do projeto.
