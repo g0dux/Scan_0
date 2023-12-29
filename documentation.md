@@ -39,4 +39,18 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir problemas ou env
 Este projeto está licenciado sob a [Licença MIT](LICENSE).
 ```
 
-Lembre-se de substituir ou complementar as seções conforme necessário, especialmente se houver detalhes específicos sobre a configuração ou personalização do projeto.
+## Configurações Adicionais
+
+- O aplicativo utiliza a API oficial do Sherlock para realizar buscas. Certifique-se de ter uma conexão de internet ativa durante o uso.
+
+## Estrutura do Código
+
+- `search(username, result_label, logger)`: Função principal que realiza a busca utilizando a API do Sherlock e atualiza a interface com os resultados.
+
+- `on_search_button_click(entry, result_label, logger)`: Função chamada ao clicar no botão de pesquisa. Obtém o nome de usuário da entrada e inicia a busca.
+
+- `create_gui()`: Função principal que cria a interface gráfica usando tkinter.
+
+## Contato
+
+Para dúvidas ou sugestões, sinta-se à vontade para entrar em contato via [email@example.com](mailto:email@example.com).
